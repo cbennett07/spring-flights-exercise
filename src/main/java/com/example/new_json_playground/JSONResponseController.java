@@ -22,7 +22,7 @@ public class JSONResponseController {
 
         Flight.Person passenger1 = new Flight.Person();
         passenger1.setFirstName("Jose");
-        passenger1.setLastName("Padilla");
+        //passenger1.setLastName("Padilla");
 
         Flight.Ticket ticket1 = new Flight.Ticket();
         ticket1.setPassenger(passenger1);
@@ -39,6 +39,7 @@ public class JSONResponseController {
         List<Flight> flightList = new ArrayList<>();
         //flight 1
         Flight flight = new Flight();
+        flight.setFlightNumber("UA234");
 
         flight.setDeparts("2017-04-21 14:34");
         List<Flight.Ticket> ticketList1 = new ArrayList<>();
@@ -57,13 +58,14 @@ public class JSONResponseController {
 
         //flight 2
         Flight flight2 = new Flight();
+        flight2.setFlightNumber("DL2101");
 
-        flight2.setDeparts("2017-04-21 14:34");
+        flight2.setDeparts("2017-04-24 14:00");
         List<Flight.Ticket> ticketList2 = new ArrayList<>();
 
         Flight.Person passenger2 = new Flight.Person();
         passenger2.setFirstName("Carlos");
-        passenger2.setLastName("Molinares");
+        //passenger2.setLastName("Molinares");
 
         Flight.Ticket ticket2 = new Flight.Ticket();
         ticket2.setPassenger(passenger2);
@@ -73,6 +75,7 @@ public class JSONResponseController {
 
         flight2.setTickets(ticketList2);
 
+        //add both flights to the flightlist
         flightList.add(flight);
         flightList.add(flight2);
 

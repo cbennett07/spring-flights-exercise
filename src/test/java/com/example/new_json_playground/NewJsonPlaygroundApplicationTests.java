@@ -48,6 +48,16 @@ public class NewJsonPlaygroundApplicationTests{
 							"[{\"departs\":\"2017-04-21 19:34\",\"tickets\":[{\"passenger\":{\"firstName\":\"Jose\",\"lastName\":\"Padilla\"},\"price\":200}]},{\"departs\":\"2017-04-21 19:34\",\"tickets\":[{\"passenger\":{\"firstName\":\"Carlos\",\"lastName\":\"Molinares\"},\"price\":300}]}]"));
 
 		}
+		@Test
+		public void endPoint3noLastName() throws Exception {
+			mvc.perform(get("/flights/flight")
+							.accept(MediaType.APPLICATION_JSON)
+							.contentType(MediaType.APPLICATION_JSON))
+					.andExpect(status().isOk())
+					.andExpect(content().string (
+							"{\"departs\":\"2017-04-21 19:34\",\"tickets\":[{\"passenger\":{\"firstName\":\"Jose\"},\"price\":200}]}"));
+
+		}
 	}
 }
 

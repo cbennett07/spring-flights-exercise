@@ -2,6 +2,8 @@ package com.example.new_json_playground;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.text.ParseException;
@@ -17,7 +19,7 @@ public class JSONResponseController {
 
         Flight flight = new Flight();
 
-        flight.setDeparts("2017-04-21 14:34");
+        //flight.setDeparts("2017-04-21 14:34");
         List<Flight.Ticket> ticketList = new ArrayList<>();
 
         Flight.Person passenger1 = new Flight.Person();
@@ -39,9 +41,9 @@ public class JSONResponseController {
         List<Flight> flightList = new ArrayList<>();
         //flight 1
         Flight flight = new Flight();
-        flight.setFlightNumber("UA234");
+        //flight.setFlightNumber("UA234");
 
-        flight.setDeparts("2017-04-21 14:34");
+        //flight.setDeparts("2017-04-21 14:34");
         List<Flight.Ticket> ticketList1 = new ArrayList<>();
 
         Flight.Person passenger1 = new Flight.Person();
@@ -58,9 +60,9 @@ public class JSONResponseController {
 
         //flight 2
         Flight flight2 = new Flight();
-        flight2.setFlightNumber("DL2101");
+        //flight2.setFlightNumber("DL2101");
 
-        flight2.setDeparts("2017-04-24 14:00");
+        //flight2.setDeparts("2017-04-24 14:00");
         List<Flight.Ticket> ticketList2 = new ArrayList<>();
 
         Flight.Person passenger2 = new Flight.Person();
@@ -80,5 +82,10 @@ public class JSONResponseController {
         flightList.add(flight2);
 
         return flightList;
+    }
+    @PostMapping("/example")
+    public String getJSONData (@RequestBody String flight){
+
+        return flight;
     }
 }

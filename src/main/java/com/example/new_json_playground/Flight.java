@@ -12,27 +12,27 @@ import java.util.TimeZone;
 import java.util.spi.TimeZoneNameProvider;
 
 public class Flight {
-    private Date departs;
+    //private Date departs;
     private List<Ticket> tickets;
-    private String flightNumber;
+    //private String flightNumber;
 
-    public String getFlightNumber() {
-        return flightNumber;
-    }
-
-    public void setFlightNumber(String flightNumber) {
-        this.flightNumber = flightNumber;
-    }
-    public Date getDeparts() {
-        return departs;
-    }
-
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "America/Chicago")
-    public void setDeparts(String departs) throws ParseException {
-        SimpleDateFormat sdf =  new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        this.departs = sdf.parse(departs);
-
-    }
+//    public String getFlightNumber() {
+//        return flightNumber;
+//    }
+//
+//    public void setFlightNumber(String flightNumber) {
+//        this.flightNumber = flightNumber;
+//    }
+//    public Date getDeparts() {
+//        return departs;
+//    }
+//
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "America/Chicago")
+//    public void setDeparts(String departs) throws ParseException {
+//        SimpleDateFormat sdf =  new SimpleDateFormat("yyyy-MM-dd HH:mm");
+//        this.departs = sdf.parse(departs);
+//
+//    }
 
     public List<Ticket> getTickets() {
         return tickets;
